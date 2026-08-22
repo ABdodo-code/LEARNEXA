@@ -50,7 +50,6 @@
                 <label for="nav-home" class="nav-btn">الرئيسية</label>
                 <label for="nav-edu" class="nav-btn">التعليم</label>
                 <label for="nav-hobbies" class="nav-btn">الهوايات</label>
-                <label for="nav-support" class="nav-btn">الدعم</label>
             </nav>
         </header>
 
@@ -668,59 +667,11 @@
                     </div>
                 </div>
             </section>
-
-            <section id="support" class="page-section">
-                <h1>مركز <span class="accent-text">المساعدة</span></h1>
-                <div class="support-grid">
-                    <div class="form-box">
-                        <h3 style="margin-bottom: 20px;">تواصل معنا</h3>
-                        <form id="contactForm">
-                            <input type="text" class="form-input" placeholder="الاسم" required>
-                            <input type="email" class="form-input" placeholder="البريد الإلكتروني" required>
-                            <textarea class="form-input" rows="4" placeholder="رسالتك" required></textarea>
-                            <button type="submit" class="btn-submit">إرسال</button>
-                        </form>
-                    </div>
-                    <div class="form-box" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
-                        <h3>معلومات الاتصال</h3>
-                        <p style="margin: 10px 0; color: var(--text-sec);">راسلنا مباشرة:</p>
-                        <h2 style="direction: ltr; color: var(--primary);">m87957411@gmail.com</h2>
-                    </div>
-                </div>
-            </section>
-
         </main>
 
         <footer>
             © 2026 LEARNEXA. جميع الحقوق محفوظة.
         </footer>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const submitBtn = form.querySelector('.btn-submit');
-                    const originalText = submitBtn.innerText;
-                    
-                    submitBtn.innerText = "تم الإرسال ✓";
-                    submitBtn.style.background = "var(--primary)";
-                    submitBtn.style.color = "#fff";
-                    
-                    alert("رسالتك وصلت بنجاح! شكراً لتواصلك معنا.");
-                    form.reset();
-                    
-                    setTimeout(() => {
-                        submitBtn.innerText = originalText;
-                        submitBtn.style.background = "";
-                        submitBtn.style.color = "";
-                    }, 3000);
-                });
-            }
-        });
-    </script>
 </body>
 </html>
